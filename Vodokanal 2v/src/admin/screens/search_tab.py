@@ -1,5 +1,5 @@
 import flet as ft
-from common_table import CommonTable
+from src.admin.components.common_table import CommonTable
 import src.database.bd_admin.select_server as select_server
 import src.admin.admin_main as ad
 
@@ -9,9 +9,10 @@ def search_tab(page):
 
     def on_row_select(selected_rows):
         # Обновите видимость кнопок здесь
+        pass
 
     def on_action(e):
-        ad.add_new_tab(page, table.selected_rows)
+        ad.AdminPanel.add_new_tab(page, table.selected_rows)
 
     columns = [
         ft.DataColumn(ft.Text("ФИО")),
